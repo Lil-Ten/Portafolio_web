@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesional Portfolio Website">
+    <title>Lil'Ten Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+     <!-- Importación de CSS de Swiper -->
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      <!-- Importación fuentes para los titulos -->
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  
+</head>
+
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <!-- Start of Navigation Menu -->
+    <nav class="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold">Lil'Ten Portfolio</h1>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#inicio" class="hover:text-blue-500">Inicio</a>
+                    <a href="#redes-sociales" class="hover:text-blue-500">redes-sociales</a>
+                    <a href="#skills" class="hover:text-blue-500">skills</a>
+                    <a href="#cursos" class="hover:text-blue-500">cursos</a>
+                    <a href="#servicios" class="hover:text-blue-500">Servicios</a>
+                    <a href="#testimonios" class="hover:text-blue-500">Plantillas WEb</a>
+                    <a href="#contacto" class="hover:text-blue-500">Contacto</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-500 dark:text-gray-200 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800">
+            <a href="#inicio" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Inicio</a>
+            <a href="#redes-sociales" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Redes</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">skills</a>
+            <a href="#portafolio" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Portafolio</a>
+            <a href="#servicios" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Servicios</a>
+            <a href="#testimonios" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Plantillas WEb</a>
+            <a href="#contacto" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">Contacto</a>
+        </div>
+    </nav>
+    <!-- End of Navigation Menu -->
+
+    <!-- Start of Hero Section -->
+ <!-- Start of Hero Section -->
+<section id="inicio" class="h-screen flex items-center justify-center relative">
+    <div class="absolute top-0 left-0 w-full h-full">
+        <video autoplay muted loop class="w-full h-full object-cover">
+            <source src="videofondo.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="relative text-center text-white">
+        <h1 id="hero-title" class="text-6xl font-bold mb-6 opacity-0 animate-title">Bienvenido a mi Portafolio</h1>
+        <p id="hero-paragraph" class="mb-6 opacity-0 text-xl">Descubre mis habilidades y proyectos destacados</p>
+        <div class="space-x-4">
+            <a href="#sobre-mi" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-300">Ver Más</a>
+            <a href="#contacto" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-lg transition duration-300">Contáctame</a>
+        </div>
+    </div>
+</section>
+<!-- End of Hero Section -->
+
+<!-- Start of Redes Sociales Section -->
+<section id="redes-sociales" class="py-16 bg-gradient-to-r from-blue-600 to-indigo-800">
+    <div class="container mx-auto px-4">
+        <!-- Título y descripción -->
+        <h2 class="text-4xl font-bold mb-4 text-center text-white drop-shadow-lg">Conéctate Conmigo</h2>
+        <p class="text-lg text-center text-white mb-8">
+            ¡Sígueme en mis redes sociales! Mantente al día con mis últimos proyectos, tutoriales y actualizaciones. ¡Haz clic en los íconos para unirte a mi comunidad digital!
+        </p>
+
+        <!-- Redes Sociales -->
+        <ul class="wrapper flex justify-center gap-16">
+            <!-- YouTube -->
+            <li class="icon youtube">
+                <img src="img/yt.svg" alt="YouTube" class="social-icon">
+                <span class="tooltip">YouTube</span>
+            </li>
+            <!-- LinkedIn -->
+            <li class="icon linkedin">
+                <img src="img/lk.svg" alt="LinkedIn" class="social-icon">
+                <span class="tooltip">LinkedIn</span>
+            </li>
+            <!-- Higbut (icono ficticio) -->
+            <li class="icon higbut">
+                <img src="img/gh.svg" alt="Higbut" class="social-icon">
+                <span class="tooltip">Higbut</span>
+            </li>
+            <!-- CodePen -->
+            <li class="icon codepen">
+                <img src="img/codepen.svg" alt="CodePen" class="social-icon">
+                <span class="tooltip">CodePen</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- End of Redes Sociales Section -->
+
+<!-- Start Section Skills -->
+<section id="skills" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-8 text-center">Habilidades y Tecnologías</h2>
+
+        <!-- Frontend Section -->
+        <div class="accordion-section">
+            <button class="accordion">
+                <span class="accordion-title">Frontend</span>
+                <span class="accordion-sign">+</span>
+            </button>
+            <div class="panel">
+                <div class="flex flex-wrap gap-8 justify-center">
+                    <img src="img/fronted/h.jpg" alt="HTML" class="skill-icon">
+                    <img src="img/fronted/c.jpg" alt="CSS" class="skill-icon">
+                    <img src="img/fronted/j.jpg" alt="JavaScript" class="skill-icon">
+                    <img src="img/fronted/t.jpg" alt="Tailwind CSS" class="skill-icon">
+                    <img src="img/fronted/r.jpg" alt="Vue.js" class="skill-icon">
+                    <img src="img/fronted/g.jpg" alt="Git" class="skill-icon">
+                </div>
+            </div>
+        </div>
+
+        <!-- Backend Section -->
+        <div class="accordion-section">
+            <button class="accordion">
+                <span class="accordion-title">Backend</span>
+                <span class="accordion-sign">+</span>
+            </button>
+            <div class="panel">
+                <div class="flex flex-wrap gap-8 justify-center">
+                    <img src="img/backend/p.jpg" alt="Python" class="skill-icon">
+                    <img src="img/backend/j.jpg" alt="Java" class="skill-icon">
+                    <img src="img/backend/ph.jpg" alt="PHP" class="skill-icon">
+                    <img src="img/backend/pd.jpg" alt="Django" class="skill-icon">
+                    <img src="img/backend/f.jpg" alt="Flask" class="skill-icon">
+                </div>
+            </div>
+        </div>
+
+        <!-- Databases and Other Technologies Section -->
+        <div class="accordion-section">
+            <button class="accordion">
+                <span class="accordion-title">Databases & Other Technologies</span>
+                <span class="accordion-sign">+</span>
+            </button>
+            <div class="panel">
+                <div class="flex flex-wrap gap-8 justify-center">
+                    <img src="img/others/o.jpg" alt="Oracle" class="skill-icon">
+                    <img src="img/others/p.jpg" alt="PostgreSQL" class="skill-icon">
+                    <img src="img/others/m.jpg" alt="MySQL" class="skill-icon">
+                    <img src="img/others/l.jpg" alt="Linux" class="skill-icon">
+                    <img src="img/others/d.jpg" alt="Docker" class="skill-icon">
+                    <img src="img/others/n.jpg"NPM" class="skill-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Section Skills -->
+
+<!-- Section Cursos -->
+<section id="cursos" class="py-16 bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern opacity-10"></div> <!-- Fondo con patrón -->
+    <div class="container mx-auto px-4 relative">
+        <!-- Título Principal -->
+        <h2 class="text-5xl font-extrabold mb-12 text-center">
+            <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500">
+                Cursos Gratuitos
+            </span>
+            <span>para Desarrolladores</span>
+        </h2>
+
+        <!-- Contenedor de Cursos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Curso 1 -->
+            <div class="curso-card bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://img.youtube.com/vi/56_Xq1733IA/maxresdefault.jpg" alt="Curso Intermedio: Domina CRUD en Flask con MySQL y Jinja2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Curso Intermedio: Domina CRUD en Flask con MySQL y Jinja2</h3>
+                    <p class="text-gray-600 mb-4">Aprende a implementar aplicaciones CRUD con Flask, integrando MySQL y Jinja2 para un desarrollo web eficiente.</p>
+                    <a href="https://www.youtube.com/watch?v=56_Xq1733IA&t=1670s" target="_blank" class="btn-primary">Ver Curso</a>
+                </div>
+            </div>
+
+            <!-- Curso 2 -->
+            <div class="curso-card bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://img.youtube.com/vi/hMzNpzhUexM/maxresdefault.jpg" alt="Curso Completo de Flask para Principiantes" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Curso Completo de Flask para Principiantes</h3>
+                    <p class="text-gray-600 mb-4">Desde los fundamentos hasta construir tu primera aplicación web completa con Flask.</p>
+                    <a href="https://www.youtube.com/watch?v=hMzNpzhUexM&t=26s" target="_blank" class="btn-primary">Ver Curso</a>
+                </div>
+            </div>
+
+            <!-- Curso 3 -->
+            <div class="curso-card bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://img.youtube.com/vi/9LW1QXMrpkQ/maxresdefault.jpg" alt="App CRUD en Java con Maven y PostgreSQL" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">App CRUD en Java con Maven y PostgreSQL</h3>
+                    <p class="text-gray-600 mb-4">Construye una aplicación Java usando patrones de diseño como DTO y DAO con PostgreSQL.</p>
+                    <a href="https://www.youtube.com/watch?v=9LW1QXMrpkQ&list=PLKAjjS1Dgy1W7kJFmZGV6o5W_nhwDwU_Z" target="_blank" class="btn-primary">Ver Curso</a>
+                </div>
+            </div>
+
+            <!-- Curso 4 -->
+            <div class="curso-card bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://img.youtube.com/vi/5ww1DZ4KJXg/maxresdefault.jpg" alt="Curso de Ejercicios Python & Lógica de Programación" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Curso de Ejercicios Python & Lógica de Programación</h3>
+                    <p class="text-gray-600 mb-4">Mejora tus habilidades en Python mientras refuerzas tu lógica de programación con ejercicios prácticos.</p>
+                    <a href="https://www.youtube.com/watch?v=5ww1DZ4KJXg&list=PLKAjjS1Dgy1XpKZXkJLxPqKgVigI01sbr" target="_blank" class="btn-primary">Ver Curso</a>
+                </div>
+            </div>
+
+            <!-- Curso 5 -->
+            <div class="curso-card bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://img.youtube.com/vi/79tv9TzOpc0/maxresdefault.jpg" alt="CRUD PHP & MySQL" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">CRUD PHP & MySQL</h3>
+                    <p class="text-gray-600 mb-4">Domina la creación de aplicaciones CRUD utilizando PHP y MySQL de forma eficiente.</p>
+                    <a href="https://www.youtube.com/watch?v=79tv9TzOpc0&list=PLKAjjS1Dgy1VvmK9hLaxJufWeduiCmJnT" target="_blank" class="btn-primary">Ver Curso</a>
+                </div>
+            </div>
+
+            <!-- Curso 6 -->
+            <div class="curso-card bg-white text-gray-800 shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="https://img.youtube.com/vi/o17R-Ixzz3Q/maxresdefault.jpg" alt="Curso de PostgreSQL y Administración" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Curso de PostgreSQL y Administración</h3>
+                    <p class="text-gray-600 mb-4">Aprende a manejar y administrar bases de datos PostgreSQL con este curso completo.</p>
+                    <a href="https://www.youtube.com/watch?v=o17R-Ixzz3Q&list=PLKAjjS1Dgy1VTpxLkIDC9a5wGtVj6JNEY" target="_blank" class="btn-primary">Ver Curso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Section Cursos -->
+
+<!-- Section Servicios -->
+<!-- Section Servicios -->
+<section id="servicios" class="py-16 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-700 dark:to-gray-900">
+    <div class="container mx-auto px-4">
+        <!-- Títulos principales -->
+        <h2 class="text-5xl font-extrabold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 dark:from-purple-400 dark:to-pink-500 uppercase">
+            TRANSFORMA TUS IDEAS EN REALIDAD
+        </h2>
+        <p class="text-center text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 uppercase">
+            EXPLORA NUESTROS SERVICIOS DISEÑADOS PARA POTENCIAR TU PRESENCIA DIGITAL Y LLEVAR TUS PROYECTOS AL SIGUIENTE NIVEL
+        </p>
+
+        <!-- Servicios -->
+        <div id="about-description" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Servicio 1 -->
+            <div class="service-card shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="img/web/portafolio.jpg" alt="Portafolio Personal" class="service-image w-full h-auto">
+                <div class="p-6 bg-white dark:bg-gray-900">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Página de Portafolio Personal</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Crea un portafolio profesional que destaque tus habilidades y proyectos con un diseño único y responsivo.</p>
+                    <a href="#" class="btn-demo mt-4 inline-block text-center px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ver Demo
+                    </a>
+                </div>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="service-card shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="img/web/responsive.jpg" alt="Diseño Responsivo" class="service-image w-full h-auto">
+                <div class="p-6 bg-white dark:bg-gray-900">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Diseño Responsivo</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Diseños adaptables que ofrecen una experiencia óptima en cualquier dispositivo.</p>
+                    <a href="#" class="btn-demo mt-4 inline-block text-center px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ver Demo
+                    </a>
+                </div>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="service-card shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="img/web/blog.jpg" alt="Blogs Personales" class="service-image w-full h-auto">
+                <div class="p-6 bg-white dark:bg-gray-900">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Creación de Blogs Personales</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Desarrolla un blog donde puedas compartir tus ideas, historias o experiencias con un diseño moderno y funcional.</p>
+                    <a href="#" class="btn-demo mt-4 inline-block text-center px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ver Demo
+                    </a>
+                </div>
+            </div>
+            <!-- Servicio 4 -->
+            <div class="service-card shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="img/web/web.jpg" alt="Aplicaciones Web" class="service-image w-full h-auto">
+                <div class="p-6 bg-white dark:bg-gray-900">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Aplicaciones Web Interactivas</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Construcción de aplicaciones web dinámicas y atractivas con las últimas tecnologías.</p>
+                    <a href="#" class="btn-demo mt-4 inline-block text-center px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ver Demo
+                    </a>
+                </div>
+            </div>
+            <!-- Servicio 5 -->
+            <div class="service-card shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="img/web/ecorme.jpg" alt="E-commerce" class="service-image w-full h-auto">
+                <div class="p-6 bg-white dark:bg-gray-900">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">E-commerce</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Crea tu tienda en línea con diseños profesionales y funcionalidades avanzadas.</p>
+                    <a href="#" class="btn-demo mt-4 inline-block text-center px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ver Demo
+                    </a>
+                </div>
+            </div>
+            <!-- Servicio 6 -->
+            <div class="service-card shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="img/web/landypages.jpg" alt="Landing Pages" class="service-image w-full h-auto">
+                <div class="p-6 bg-white dark:bg-gray-900">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Landing Pages</h3>
+                    <p class="text-gray-600 dark:text-gray-400">Landing pages efectivas y optimizadas para maximizar conversiones.</p>
+                    <a href="#" class="btn-demo mt-4 inline-block text-center px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                        Ver Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section servicios -->
+
+<!-- Section Contacto -->
+<!-- Section Contacto -->
+<section id="contacto" class="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 dark:bg-gradient-to-r dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div class="container mx-auto px-4 text-white">
+        <!-- Título principal -->
+        <h2 class="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600 mb-6">
+            ¡Lleva tu negocio al siguiente nivel!
+        </h2>
+        <p class="text-center text-xl md:text-2xl text-gray-300 mb-12 font-medium">
+            Contáctame y juntos crearemos un sitio web único que refleje tu marca. ¡Todo al mejor precio y con la mejor calidad!
+        </p>
+
+        <!-- Sección de Servicios y Formulario en 2 columnas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Servicios ofrecidos -->
+            <div class="space-y-6">
+                <div class="service-card text-center p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4"><i class="fas fa-briefcase mr-2"></i>Portafolio Personal</h3>
+                    <p class="text-gray-300">Un portafolio web profesional que muestra tus habilidades y proyectos de manera atractiva y accesible.</p>
+                </div>
+                <div class="service-card text-center p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4"><i class="fas fa-blog mr-2"></i>Blogs Personales</h3>
+                    <p class="text-gray-300">Diseña un blog único donde puedas compartir tus ideas, historias y conocimientos con tu audiencia.</p>
+                </div>
+                <div class="service-card text-center p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4"><i class="fas fa-store mr-2"></i>E-commerce</h3>
+                    <p class="text-gray-300">Construye una tienda en línea con todo lo que necesitas para vender tus productos de manera efectiva.</p>
+                </div>
+                <div class="service-card text-center p-6 bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4"><i class="fas fa-laptop-code mr-2"></i>Landing Pages</h3>
+                    <p class="text-gray-300">Crea páginas de aterrizaje optimizadas para convertir visitantes en clientes con facilidad.</p>
+                </div>
+            </div>
+
+            <!-- Formulario de contacto (Segunda columna) -->
+            <div class="bg-gradient-to-r from-purple-700 via-blue-800 to-indigo-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h3 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500 mb-6 text-center">
+                    ¡Estoy aquí para ayudarte!
+                </h3>
+                <p class="text-center text-xl text-gray-300 mb-8 font-medium">
+                    Completa el formulario a continuación y me pondré en contacto contigo para empezar tu proyecto web.
+                </p>
+                <form action="mailto:tu-email@dominio.com" method="POST" enctype="multipart/form-data" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg font-semibold text-gray-100 mb-2"><i class="fas fa-user mr-2"></i>Nombre</label>
+                        <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-600 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:text-gray-100 dark:focus:ring-blue-500" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-semibold text-gray-100 mb-2"><i class="fas fa-envelope mr-2"></i>Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-600 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:text-gray-100 dark:focus:ring-blue-500" placeholder="Ingresa tu correo electrónico">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg font-semibold text-gray-100 mb-2"><i class="fas fa-comment-alt mr-2"></i>Mensaje</label>
+                        <textarea id="message" name="message" required rows="5" class="w-full p-3 border border-gray-600 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:text-gray-100 dark:focus:ring-blue-500" placeholder="Escribe tu mensaje aquí"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="px-8 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section contacto -->
+
+ <!-- ir hacia arriva -->
+ <!-- Sección que contiene el contenido de la página -->
+<section>
+    <!-- Tu contenido aquí -->
+  </section>
+  
+  <!-- Flecha para ir hacia arriba o hacia abajo -->
+  <button id="scrollBtn" class="scroll-btn">
+    <i id="scrollIcon" class="fas fa-arrow-down"></i>
+  </button>
+  
+  <!-- Script para manejar el desplazamiento y mostrar el botón -->
+  <script>
+    // Obtener el botón y el ícono
+    const scrollBtn = document.getElementById("scrollBtn");
+    const scrollIcon = document.getElementById("scrollIcon");
+  
+    // Detectar el desplazamiento en la página
+    window.onscroll = function() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      const documentHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+  
+      // Mostrar el botón solo si se ha desplazado más de 20px
+      if (currentScroll > 20) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+  
+      // Cambiar la dirección de la flecha según la posición en la página
+      if (currentScroll + windowHeight >= documentHeight) {
+        // Si está al final de la página, mostrar flecha hacia arriba
+        scrollIcon.classList.remove("fa-arrow-down");
+        scrollIcon.classList.add("fa-arrow-up");
+        scrollBtn.setAttribute('title', 'Volver arriba');
+      } else {
+        // Si está en la parte superior, mostrar flecha hacia abajo
+        scrollIcon.classList.remove("fa-arrow-up");
+        scrollIcon.classList.add("fa-arrow-down");
+        scrollBtn.setAttribute('title', 'Desplazar hacia abajo');
+      }
+    };
+  
+    // Función para desplazar hacia arriba o hacia abajo dependiendo del ícono
+    scrollBtn.onclick = function() {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      const documentHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+  
+      if (currentScroll + windowHeight >= documentHeight) {
+        // Si está en el fondo, desplazarse hacia arriba
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      } else {
+        // Si está arriba, desplazarse hacia abajo
+        window.scrollTo({
+          top: documentHeight,
+          behavior: "smooth"
+        });
+      }
+    };
+  </script>
+  
+  <!-- Estilos CSS para el botón -->
+  <style>
+    .scroll-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none; /* Oculto inicialmente */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      z-index: 1000;
+    }
+  
+    .scroll-btn:hover {
+      background-color: #e64a19;
+      transform: scale(1.1);
+    }
+  
+    .scroll-btn i {
+      margin: 0;
+    }
+  </style>
+  
+  
+<!-- ir hacia arriva -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    window.addEventListener('load', () => {
+        gsap.to("#about-description", {
+            opacity: 1,
+            y: -20,
+            duration: 1,
+            ease: "power4.out"
+        });
+    });
+</script>
+
+
+    <!-- Include other sections following similar structure -->
+
+    <!-- Start of Footer -->
+    <!-- Start of Footer -->
+<footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+        <!-- Derechos de autor -->
+        <p class="text-lg mb-4">&copy; 2024 Antony's Portfolio. Todos los derechos reservados.</p>
+        
+        <!-- Redes sociales -->
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <i class="fab fa-youtube text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <i class="fab fa-codepen text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <i class="fab fa-tiktok text-2xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="mt-6 text-gray-400 text-sm">
+            <p>Diseñado por Antony. <a href="mailto:antony@example.com" class="text-gray-300 hover:text-blue-500">Contáctame</a></p>
+        </div>
+    </div>
+</footer>
+<!-- End of Footer -->
+
+    <!-- End of Footer -->
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <script>
+        window.addEventListener('load', () => {
+            gsap.to("#hero-title", {
+                opacity: 1,
+                y: -30,
+                duration: 1,
+                ease: "power4.out"
+            });
+            gsap.to("#hero-paragraph", {
+                opacity: 1,
+                y: -20,
+                duration: 1,
+                delay: 0.5,
+                ease: "power4.out"
+            });
+        });
+    </script>
+<!-- seccion de skills -->
+    <script>
+// JavaScript to toggle the accordion functionality
+const accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach(accordion => {
+    accordion.addEventListener('click', () => {
+        // Toggle the panel visibility
+        const panel = accordion.nextElementSibling;
+        const sign = accordion.querySelector('.accordion-sign');
+        
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+            sign.textContent = "+"; // Change sign back to '+'
+        } else {
+            panel.style.display = "block";
+            sign.textContent = "-"; // Change sign to '-'
+        }
+    });
+});
+
+    </script>
+    <!-- end seccion de skills -->
+
+</body>
+
+</html>
